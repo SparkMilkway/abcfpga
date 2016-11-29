@@ -1,0 +1,1236 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "top.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "top"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\onesp\Desktop\2016F\EC551\Lab 3\Systolic-Array-master\src\transmitter.v" into library work
+Parsing module <transmitter>.
+Analyzing Verilog file "C:\Users\onesp\Desktop\2016F\EC551\Lab 3\Systolic-Array-master\src\systol_new1.v" into library work
+Parsing module <systol_new1>.
+Analyzing Verilog file "C:\Users\onesp\Desktop\2016F\EC551\Lab 3\Systolic-Array-master\src\reciever.v" into library work
+Parsing module <receiver>.
+Analyzing Verilog file "C:\Users\onesp\Desktop\2016F\EC551\Lab 3\Systolic-Array-master\src\receiver_sampler.v" into library work
+Parsing module <receiver_sampler>.
+Analyzing Verilog file "C:\Users\onesp\Desktop\2016F\EC551\Lab 3\Systolic-Array-master\src\PLL_9_6M.v" into library work
+Parsing module <PLL_9_6M>.
+Analyzing Verilog file "C:\Users\onesp\Desktop\2016F\EC551\Lab 3\Systolic-Array-master\src\MEM.v" into library work
+Parsing module <MEM>.
+Analyzing Verilog file "C:\Users\onesp\Desktop\2016F\EC551\Lab 3\Systolic-Array-master\src\Data_send.v" into library work
+Parsing module <Data_send>.
+Analyzing Verilog file "C:\Users\onesp\Desktop\2016F\EC551\Lab 3\Systolic-Array-master\src\Data_Process.v" into library work
+Parsing module <Data_Process>.
+Analyzing Verilog file "C:\Users\onesp\Desktop\2016F\EC551\Lab 3\Systolic-Array-master\src\Data_collect.v" into library work
+Parsing module <Data_collect>.
+Analyzing Verilog file "C:\Users\onesp\Desktop\2016F\EC551\Lab 3\Systolic-Array-master\src\clk_divide.v" into library work
+Parsing module <clk_divide>.
+Analyzing Verilog file "C:\Users\onesp\Desktop\2016F\EC551\Lab 3\Systolic-Array-master\src\top.v" into library work
+Parsing module <top>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <top>.
+
+Elaborating module <Data_Process>.
+
+Elaborating module <Data_collect(NUM_DATA=1)>.
+WARNING:HDLCompiler:1127 - "C:\Users\onesp\Desktop\2016F\EC551\Lab 3\Systolic-Array-master\src\top.v" Line 68: Assignment to data_collection_finish ignored, since the identifier is never used
+
+Elaborating module <Data_send(NUM_DATA=1)>.
+
+Elaborating module <receiver_sampler>.
+
+Elaborating module <receiver>.
+
+Elaborating module <transmitter>.
+
+Elaborating module <clk_divide(CLK_RATE=9600000,BAUD_RATE=9600,SAMPLE_RATE=10)>.
+
+Elaborating module <PLL_9_6M>.
+
+Elaborating module <IBUFG>.
+
+Elaborating module <PLL_BASE(BANDWIDTH="OPTIMIZED",CLK_FEEDBACK="CLKFBOUT",COMPENSATION="SYSTEM_SYNCHRONOUS",DIVCLK_DIVIDE=5,CLKFBOUT_MULT=24,CLKFBOUT_PHASE=0.0,CLKOUT0_DIVIDE=50,CLKOUT0_PHASE=0.0,CLKOUT0_DUTY_CYCLE=0.5,CLKIN_PERIOD=10.0,REF_JITTER=0.01)>.
+WARNING:HDLCompiler:1127 - "C:\Users\onesp\Desktop\2016F\EC551\Lab 3\Systolic-Array-master\src\PLL_9_6M.v" Line 116: Assignment to clkout1_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\onesp\Desktop\2016F\EC551\Lab 3\Systolic-Array-master\src\PLL_9_6M.v" Line 117: Assignment to clkout2_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\onesp\Desktop\2016F\EC551\Lab 3\Systolic-Array-master\src\PLL_9_6M.v" Line 118: Assignment to clkout3_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\onesp\Desktop\2016F\EC551\Lab 3\Systolic-Array-master\src\PLL_9_6M.v" Line 119: Assignment to clkout4_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\onesp\Desktop\2016F\EC551\Lab 3\Systolic-Array-master\src\PLL_9_6M.v" Line 120: Assignment to clkout5_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\onesp\Desktop\2016F\EC551\Lab 3\Systolic-Array-master\src\PLL_9_6M.v" Line 122: Assignment to locked_unused ignored, since the identifier is never used
+
+Elaborating module <BUFG>.
+
+Elaborating module <MEM(NUM_DATA=1)>.
+
+Elaborating module <MEM>.
+
+Elaborating module <systol_new1>.
+WARNING:HDLCompiler:413 - "C:\Users\onesp\Desktop\2016F\EC551\Lab 3\Systolic-Array-master\src\systol_new1.v" Line 69: Result of 17-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\onesp\Desktop\2016F\EC551\Lab 3\Systolic-Array-master\src\systol_new1.v" Line 70: Result of 15-bit expression is truncated to fit in 14-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\onesp\Desktop\2016F\EC551\Lab 3\Systolic-Array-master\src\systol_new1.v" Line 71: Result of 15-bit expression is truncated to fit in 14-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\onesp\Desktop\2016F\EC551\Lab 3\Systolic-Array-master\src\systol_new1.v" Line 78: Result of 17-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\onesp\Desktop\2016F\EC551\Lab 3\Systolic-Array-master\src\systol_new1.v" Line 79: Result of 15-bit expression is truncated to fit in 14-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\onesp\Desktop\2016F\EC551\Lab 3\Systolic-Array-master\src\systol_new1.v" Line 80: Result of 15-bit expression is truncated to fit in 14-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\onesp\Desktop\2016F\EC551\Lab 3\Systolic-Array-master\src\systol_new1.v" Line 87: Result of 17-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\onesp\Desktop\2016F\EC551\Lab 3\Systolic-Array-master\src\systol_new1.v" Line 88: Result of 15-bit expression is truncated to fit in 14-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\onesp\Desktop\2016F\EC551\Lab 3\Systolic-Array-master\src\systol_new1.v" Line 89: Result of 15-bit expression is truncated to fit in 14-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\onesp\Desktop\2016F\EC551\Lab 3\Systolic-Array-master\src\systol_new1.v" Line 108: Result of 32-bit expression is truncated to fit in 14-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\onesp\Desktop\2016F\EC551\Lab 3\Systolic-Array-master\src\systol_new1.v" Line 110: Result of 15-bit expression is truncated to fit in 14-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\onesp\Desktop\2016F\EC551\Lab 3\Systolic-Array-master\src\systol_new1.v" Line 125: Result of 15-bit expression is truncated to fit in 14-bit target.
+WARNING:HDLCompiler:1127 - "C:\Users\onesp\Desktop\2016F\EC551\Lab 3\Systolic-Array-master\src\systol_new1.v" Line 33: Assignment to address ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "C:\Users\onesp\Desktop\2016F\EC551\Lab 3\Systolic-Array-master\src\systol_new1.v" Line 214: Result of 15-bit expression is truncated to fit in 14-bit target.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <top>.
+    Related source file is "C:\Users\onesp\Desktop\2016F\EC551\Lab 3\Systolic-Array-master\src\top.v".
+        NUM_DATA = 1
+        CLK_RATE = 9600000
+        BAUD_RATE = 9600
+        SAMPLE_RATE = 10
+INFO:Xst:3210 - "C:\Users\onesp\Desktop\2016F\EC551\Lab 3\Systolic-Array-master\src\top.v" line 60: Output port <finish> of the instance <Data_collect> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <top> synthesized.
+
+Synthesizing Unit <Data_Process>.
+    Related source file is "C:\Users\onesp\Desktop\2016F\EC551\Lab 3\Systolic-Array-master\src\Data_Process.v".
+    Found 1-bit register for signal <data_send_run>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <Data_Process> synthesized.
+
+Synthesizing Unit <Data_collect>.
+    Related source file is "C:\Users\onesp\Desktop\2016F\EC551\Lab 3\Systolic-Array-master\src\Data_collect.v".
+        NUM_DATA = 1
+    Found 1-bit register for signal <prev_data_ready>.
+    Found 14-bit register for signal <MEM_write_addr>.
+    Found 1-bit register for signal <MEM_write_enable>.
+    Found 14-bit register for signal <delayed_write_addr>.
+    Found 8-bit register for signal <MEM_write_data>.
+    Found 1-bit register for signal <collect_finish_display>.
+    Found 14-bit adder for signal <delayed_write_addr[13]_GND_3_o_add_6_OUT> created at line 45.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  39 D-type flip-flop(s).
+Unit <Data_collect> synthesized.
+
+Synthesizing Unit <Data_send>.
+    Related source file is "C:\Users\onesp\Desktop\2016F\EC551\Lab 3\Systolic-Array-master\src\Data_send.v".
+        NUM_DATA = 1
+    Found 1-bit register for signal <prev_send_start>.
+    Found 14-bit register for signal <MEM_read_sel>.
+    Found 1-bit register for signal <transmitter_start>.
+    Found 1-bit register for signal <prev_tx_ready>.
+    Found 14-bit adder for signal <MEM_read_sel[13]_GND_4_o_add_6_OUT> created at line 44.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  17 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <Data_send> synthesized.
+
+Synthesizing Unit <receiver_sampler>.
+    Related source file is "C:\Users\onesp\Desktop\2016F\EC551\Lab 3\Systolic-Array-master\src\receiver_sampler.v".
+    Found 4-bit register for signal <zero_counter>.
+    Found 4-bit register for signal <one_counter>.
+    Found 1-bit register for signal <data_bit>.
+    Found 1-bit register for signal <prev_rx_clk>.
+    Found 4-bit adder for signal <one_counter[3]_GND_5_o_add_4_OUT> created at line 30.
+    Found 4-bit adder for signal <zero_counter[3]_GND_5_o_add_5_OUT> created at line 32.
+    Found 4-bit comparator greater for signal <one_counter[3]_INV_6_o> created at line 39
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  10 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <receiver_sampler> synthesized.
+
+Synthesizing Unit <receiver>.
+    Related source file is "C:\Users\onesp\Desktop\2016F\EC551\Lab 3\Systolic-Array-master\src\reciever.v".
+    Found 4-bit register for signal <state>.
+    Found 8-bit register for signal <shift>.
+    Found 8-bit register for signal <data>.
+    Found 1-bit register for signal <sig>.
+    Found 4-bit adder for signal <state[3]_GND_6_o_add_8_OUT> created at line 52.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  21 D-type flip-flop(s).
+	inferred   5 Multiplexer(s).
+Unit <receiver> synthesized.
+
+Synthesizing Unit <transmitter>.
+    Related source file is "C:\Users\onesp\Desktop\2016F\EC551\Lab 3\Systolic-Array-master\src\transmitter.v".
+    Found 1-bit register for signal <available>.
+    Found 4-bit register for signal <state>.
+    Found 11-bit register for signal <shift>.
+    Found 4-bit adder for signal <state[3]_GND_7_o_add_8_OUT> created at line 51.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  16 D-type flip-flop(s).
+	inferred   8 Multiplexer(s).
+Unit <transmitter> synthesized.
+
+Synthesizing Unit <clk_divide>.
+    Related source file is "C:\Users\onesp\Desktop\2016F\EC551\Lab 3\Systolic-Array-master\src\clk_divide.v".
+        CLK_RATE = 9600000
+        BAUD_RATE = 9600
+        SAMPLE_RATE = 10
+    Found 1-bit register for signal <clk_uart_internal>.
+    Found 17-bit register for signal <counter_sampling>.
+    Found 1-bit register for signal <clk_sampling_internal>.
+    Found 17-bit register for signal <counter_uart>.
+    Found 17-bit adder for signal <counter_uart[16]_GND_9_o_add_5_OUT> created at line 64.
+    Found 17-bit adder for signal <counter_sampling[16]_GND_9_o_add_12_OUT> created at line 85.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  36 D-type flip-flop(s).
+Unit <clk_divide> synthesized.
+
+Synthesizing Unit <PLL_9_6M>.
+    Related source file is "C:\Users\onesp\Desktop\2016F\EC551\Lab 3\Systolic-Array-master\src\PLL_9_6M.v".
+    Summary:
+	no macro.
+Unit <PLL_9_6M> synthesized.
+
+Synthesizing Unit <MEM_1>.
+    Related source file is "C:\Users\onesp\Desktop\2016F\EC551\Lab 3\Systolic-Array-master\src\MEM.v".
+        NUM_DATA = 1
+WARNING:Xst:647 - Input <write_select<13:1>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <read_select<13:1>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 2x8-bit dual-port RAM <Mram_Data> for signal <Data>.
+    Found 8-bit register for signal <read_data>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   8 D-type flip-flop(s).
+Unit <MEM_1> synthesized.
+
+Synthesizing Unit <MEM>.
+    Related source file is "C:\Users\onesp\Desktop\2016F\EC551\Lab 3\Systolic-Array-master\src\MEM.v".
+        NUM_DATA = 2499
+WARNING:Xst:647 - Input <write_select<13:12>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <read_select<13:12>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <Data>, simulation mismatch.
+    Found 2500x8-bit dual-port RAM <Mram_Data> for signal <Data>.
+    Found 8-bit register for signal <read_data>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   8 D-type flip-flop(s).
+Unit <MEM> synthesized.
+
+Synthesizing Unit <systol_new1>.
+    Related source file is "C:\Users\onesp\Desktop\2016F\EC551\Lab 3\Systolic-Array-master\src\systol_new1.v".
+    Found 8-bit register for signal <d2>.
+    Found 8-bit register for signal <d3>.
+    Found 16-bit register for signal <i>.
+    Found 14-bit register for signal <j>.
+    Found 14-bit register for signal <k>.
+    Found 14-bit register for signal <l>.
+    Found 14-bit register for signal <cnt>.
+    Found 8-bit register for signal <w1>.
+    Found 8-bit register for signal <w2>.
+    Found 8-bit register for signal <w3>.
+    Found 8-bit register for signal <w4>.
+    Found 8-bit register for signal <w5>.
+    Found 8-bit register for signal <w6>.
+    Found 8-bit register for signal <w7>.
+    Found 8-bit register for signal <w8>.
+    Found 8-bit register for signal <w9>.
+    Found 1-bit register for signal <flag1>.
+    Found 1-bit register for signal <flag2>.
+    Found 14-bit register for signal <sr>.
+    Found 14-bit register for signal <ws1>.
+    Found 1-bit register for signal <we1>.
+    Found 14-bit register for signal <read_select>.
+    Found 8-bit register for signal <result_copy>.
+    Found 14-bit register for signal <ws2>.
+    Found 1-bit register for signal <we2>.
+    Found 14-bit register for signal <result_1>.
+    Found 8-bit register for signal <d1>.
+    Found 14-bit subtractor for signal <l[13]_GND_16_o_sub_43_OUT> created at line 96.
+    Found 14-bit subtractor for signal <j[13]_GND_16_o_sub_44_OUT> created at line 97.
+    Found 14-bit subtractor for signal <k[13]_GND_16_o_sub_45_OUT> created at line 98.
+    Found 14-bit adder for signal <l[13]_GND_16_o_add_6_OUT> created at line 70.
+    Found 14-bit adder for signal <j[13]_GND_16_o_add_12_OUT> created at line 79.
+    Found 16-bit adder for signal <i[15]_GND_16_o_add_17_OUT> created at line 87.
+    Found 14-bit adder for signal <k[13]_GND_16_o_add_18_OUT> created at line 88.
+    Found 14-bit adder for signal <cnt[13]_GND_16_o_add_19_OUT> created at line 89.
+    Found 14-bit adder for signal <sr[13]_GND_16_o_add_62_OUT> created at line 110.
+    Found 14-bit adder for signal <n0383> created at line 201.
+    Found 14-bit adder for signal <n0386> created at line 201.
+    Found 14-bit adder for signal <result_1[13]_w3[7]_add_142_OUT> created at line 201.
+    Found 14-bit adder for signal <n0392> created at line 205.
+    Found 14-bit adder for signal <n0395> created at line 205.
+    Found 14-bit adder for signal <result_1[13]_w6[7]_add_149_OUT> created at line 205.
+    Found 14-bit adder for signal <n0401> created at line 209.
+    Found 14-bit adder for signal <n0404> created at line 209.
+    Found 14-bit adder for signal <result_1[13]_w9[7]_add_157_OUT> created at line 209.
+    Found 14-bit adder for signal <ws2[13]_GND_16_o_add_160_OUT> created at line 214.
+    Found 14-bit subtractor for signal <GND_16_o_GND_16_o_sub_62_OUT<13:0>> created at line 108.
+    Found 8x8-bit multiplier for signal <n0318> created at line 201.
+    Found 8x8-bit multiplier for signal <n0320> created at line 201.
+    Found 8x8-bit multiplier for signal <n0322> created at line 201.
+    Found 8x8-bit multiplier for signal <n0324> created at line 205.
+    Found 8x8-bit multiplier for signal <n0326> created at line 205.
+    Found 8x8-bit multiplier for signal <n0328> created at line 205.
+    Found 8x8-bit multiplier for signal <n0330> created at line 209.
+    Found 8x8-bit multiplier for signal <n0332> created at line 209.
+    Found 8x8-bit multiplier for signal <n0334> created at line 209.
+    Found 14-bit comparator greater for signal <k[13]_GND_16_o_LessThan_3_o> created at line 63
+    Found 14-bit comparator greater for signal <sr[13]_GND_16_o_LessThan_61_o> created at line 104
+    Found 14-bit comparator greater for signal <sr[13]_GND_16_o_LessThan_71_o> created at line 119
+    Found 16-bit comparator greater for signal <GND_16_o_i[15]_LessThan_152_o> created at line 207
+    Found 16-bit comparator greater for signal <GND_16_o_i[15]_LessThan_160_o> created at line 211
+    Summary:
+	inferred   9 Multiplier(s).
+	inferred  13 Adder/Subtractor(s).
+	inferred 250 D-type flip-flop(s).
+	inferred   5 Comparator(s).
+	inferred  22 Multiplexer(s).
+Unit <systol_new1> synthesized.
+
+Synthesizing Unit <mod_16u_2u>.
+    Related source file is "".
+    Found 18-bit adder for signal <GND_17_o_b[1]_add_1_OUT> created at line 0.
+    Found 17-bit adder for signal <GND_17_o_b[1]_add_3_OUT> created at line 0.
+    Found 16-bit adder for signal <a[15]_b[1]_add_5_OUT> created at line 0.
+    Found 16-bit adder for signal <a[15]_GND_17_o_add_7_OUT> created at line 0.
+    Found 16-bit adder for signal <a[15]_GND_17_o_add_9_OUT> created at line 0.
+    Found 16-bit adder for signal <a[15]_GND_17_o_add_11_OUT> created at line 0.
+    Found 16-bit adder for signal <a[15]_GND_17_o_add_13_OUT> created at line 0.
+    Found 16-bit adder for signal <a[15]_GND_17_o_add_15_OUT> created at line 0.
+    Found 16-bit adder for signal <a[15]_GND_17_o_add_17_OUT> created at line 0.
+    Found 16-bit adder for signal <a[15]_GND_17_o_add_19_OUT> created at line 0.
+    Found 16-bit adder for signal <a[15]_GND_17_o_add_21_OUT> created at line 0.
+    Found 16-bit adder for signal <a[15]_GND_17_o_add_23_OUT> created at line 0.
+    Found 16-bit adder for signal <a[15]_GND_17_o_add_25_OUT> created at line 0.
+    Found 16-bit adder for signal <a[15]_GND_17_o_add_27_OUT> created at line 0.
+    Found 16-bit adder for signal <a[15]_GND_17_o_add_29_OUT> created at line 0.
+    Found 16-bit adder for signal <a[15]_GND_17_o_add_31_OUT> created at line 0.
+    Found 16-bit adder for signal <a[15]_GND_17_o_add_33_OUT> created at line 0.
+    Found 18-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 17-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0011> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0012> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0013> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0014> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0015> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0016> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0017> created at line 0
+    Summary:
+	inferred  17 Adder/Subtractor(s).
+	inferred  17 Comparator(s).
+	inferred 257 Multiplexer(s).
+Unit <mod_16u_2u> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 2500x8-bit dual-port RAM                              : 1
+ 2x8-bit dual-port RAM                                 : 1
+# Multipliers                                          : 9
+ 8x8-bit multiplier                                    : 9
+# Adders/Subtractors                                   : 38
+ 14-bit adder                                          : 10
+ 14-bit addsub                                         : 3
+ 14-bit subtractor                                     : 1
+ 16-bit adder                                          : 16
+ 17-bit adder                                          : 3
+ 18-bit adder                                          : 1
+ 4-bit adder                                           : 4
+# Registers                                            : 55
+ 1-bit register                                        : 17
+ 11-bit register                                       : 1
+ 14-bit register                                       : 12
+ 16-bit register                                       : 1
+ 17-bit register                                       : 2
+ 4-bit register                                        : 4
+ 8-bit register                                        : 18
+# Comparators                                          : 23
+ 14-bit comparator greater                             : 3
+ 16-bit comparator greater                             : 2
+ 16-bit comparator lessequal                           : 15
+ 17-bit comparator lessequal                           : 1
+ 18-bit comparator lessequal                           : 1
+ 4-bit comparator greater                              : 1
+# Multiplexers                                         : 293
+ 1-bit 2-to-1 multiplexer                              : 263
+ 11-bit 2-to-1 multiplexer                             : 1
+ 14-bit 2-to-1 multiplexer                             : 18
+ 2-bit 2-to-1 multiplexer                              : 1
+ 4-bit 2-to-1 multiplexer                              : 9
+ 8-bit 2-to-1 multiplexer                              : 1
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+INFO:Xst:2261 - The FF/Latch <w3_0> in Unit <a1> is equivalent to the following 8 FFs/Latches, which will be removed : <w1_0> <w2_1> <w4_1> <w5_2> <w8_1> <w6_1> <w7_0> <w9_0> 
+INFO:Xst:2261 - The FF/Latch <w3_1> in Unit <a1> is equivalent to the following 62 FFs/Latches, which will be removed : <w3_2> <w3_3> <w3_4> <w3_5> <w3_6> <w3_7> <w1_1> <w1_2> <w1_3> <w1_4> <w1_5> <w1_6> <w1_7> <w2_0> <w2_2> <w2_3> <w2_4> <w2_5> <w2_6> <w2_7> <w4_0> <w4_2> <w4_3> <w4_4> <w4_5> <w4_6> <w4_7> <w5_0> <w5_1> <w5_3> <w5_4> <w5_5> <w5_6> <w5_7> <w8_0> <w8_2> <w8_3> <w8_4> <w8_5> <w8_6> <w8_7> <w6_0> <w6_2> <w6_3> <w6_4> <w6_5> <w6_6> <w6_7> <w7_1> <w7_2> <w7_3> <w7_4> <w7_5> <w7_6> <w7_7> <w9_1> <w9_2> <w9_3> <w9_4> <w9_5> <w9_6> <w9_7> 
+WARNING:Xst:1710 - FF/Latch <w3_0> (without init value) has a constant value of 1 in block <a1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <w3_1> (without init value) has a constant value of 0 in block <a1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <read_select_1> of sequential type is unconnected in block <a1>.
+WARNING:Xst:2677 - Node <read_select_2> of sequential type is unconnected in block <a1>.
+WARNING:Xst:2677 - Node <read_select_3> of sequential type is unconnected in block <a1>.
+WARNING:Xst:2677 - Node <read_select_4> of sequential type is unconnected in block <a1>.
+WARNING:Xst:2677 - Node <read_select_5> of sequential type is unconnected in block <a1>.
+WARNING:Xst:2677 - Node <read_select_6> of sequential type is unconnected in block <a1>.
+WARNING:Xst:2677 - Node <read_select_7> of sequential type is unconnected in block <a1>.
+WARNING:Xst:2677 - Node <read_select_8> of sequential type is unconnected in block <a1>.
+WARNING:Xst:2677 - Node <read_select_9> of sequential type is unconnected in block <a1>.
+WARNING:Xst:2677 - Node <read_select_10> of sequential type is unconnected in block <a1>.
+WARNING:Xst:2677 - Node <read_select_11> of sequential type is unconnected in block <a1>.
+WARNING:Xst:2677 - Node <read_select_12> of sequential type is unconnected in block <a1>.
+WARNING:Xst:2677 - Node <read_select_13> of sequential type is unconnected in block <a1>.
+WARNING:Xst:2404 -  FFs/Latches <w2<7:2>> (without init value) have a constant value of 0 in block <systol_new1>.
+WARNING:Xst:2404 -  FFs/Latches <w1<7:1>> (without init value) have a constant value of 0 in block <systol_new1>.
+WARNING:Xst:2404 -  FFs/Latches <w3<7:1>> (without init value) have a constant value of 0 in block <systol_new1>.
+WARNING:Xst:2404 -  FFs/Latches <w4<7:2>> (without init value) have a constant value of 0 in block <systol_new1>.
+WARNING:Xst:2404 -  FFs/Latches <w5<7:3>> (without init value) have a constant value of 0 in block <systol_new1>.
+WARNING:Xst:2404 -  FFs/Latches <w7<7:1>> (without init value) have a constant value of 0 in block <systol_new1>.
+WARNING:Xst:2404 -  FFs/Latches <w6<7:2>> (without init value) have a constant value of 0 in block <systol_new1>.
+WARNING:Xst:2404 -  FFs/Latches <w8<7:2>> (without init value) have a constant value of 0 in block <systol_new1>.
+WARNING:Xst:2404 -  FFs/Latches <w9<7:1>> (without init value) have a constant value of 0 in block <systol_new1>.
+
+Synthesizing (advanced) Unit <Data_collect>.
+The following registers are absorbed into counter <delayed_write_addr>: 1 register on signal <delayed_write_addr>.
+Unit <Data_collect> synthesized (advanced).
+
+Synthesizing (advanced) Unit <Data_send>.
+The following registers are absorbed into counter <MEM_read_sel>: 1 register on signal <MEM_read_sel>.
+Unit <Data_send> synthesized (advanced).
+
+Synthesizing (advanced) Unit <MEM>.
+INFO:Xst:3226 - The RAM <Mram_Data> will be implemented as a BLOCK RAM, absorbing the following register(s): <read_data>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 2500-word x 8-bit                   |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <wr_enable>     | high     |
+    |     addrA          | connected to signal <write_select>  |          |
+    |     diA            | connected to signal <write_data>    |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 2500-word x 8-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <clk>           | rise     |
+    |     addrB          | connected to signal <read_select>   |          |
+    |     doB            | connected to signal <read_data>     |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <MEM> synthesized (advanced).
+
+Synthesizing (advanced) Unit <MEM_1>.
+INFO:Xst:3231 - The small RAM <Mram_Data> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 2-word x 8-bit                      |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <wr_enable>     | high     |
+    |     addrA          | connected to signal <write_select>  |          |
+    |     diA            | connected to signal <write_data>    |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 2-word x 8-bit                      |          |
+    |     addrB          | connected to signal <read_select>   |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <MEM_1> synthesized (advanced).
+
+Synthesizing (advanced) Unit <clk_divide>.
+The following registers are absorbed into counter <counter_sampling>: 1 register on signal <counter_sampling>.
+The following registers are absorbed into counter <counter_uart>: 1 register on signal <counter_uart>.
+Unit <clk_divide> synthesized (advanced).
+
+Synthesizing (advanced) Unit <receiver_sampler>.
+The following registers are absorbed into counter <zero_counter>: 1 register on signal <zero_counter>.
+The following registers are absorbed into counter <one_counter>: 1 register on signal <one_counter>.
+Unit <receiver_sampler> synthesized (advanced).
+
+Synthesizing (advanced) Unit <systol_new1>.
+The following registers are absorbed into accumulator <l>: 1 register on signal <l>.
+The following registers are absorbed into accumulator <j>: 1 register on signal <j>.
+The following registers are absorbed into counter <i>: 1 register on signal <i>.
+The following registers are absorbed into counter <k>: 1 register on signal <k>.
+The following registers are absorbed into counter <ws2>: 1 register on signal <ws2>.
+The following registers are absorbed into counter <cnt>: 1 register on signal <cnt>.
+The following registers are absorbed into counter <sr>: 1 register on signal <sr>.
+Unit <systol_new1> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 2500x8-bit dual-port block RAM                        : 1
+ 2x8-bit dual-port distributed RAM                     : 1
+# Multipliers                                          : 9
+ 2x8-bit multiplier                                    : 4
+ 3x8-bit multiplier                                    : 4
+ 4x8-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 25
+ 14-bit adder                                          : 5
+ 14-bit subtractor                                     : 1
+ 16-bit adder                                          : 16
+ 2-bit adder                                           : 1
+ 4-bit adder                                           : 2
+# Counters                                             : 11
+ 14-bit up counter                                     : 5
+ 14-bit updown counter                                 : 1
+ 16-bit up counter                                     : 1
+ 17-bit up counter                                     : 2
+ 4-bit up counter                                      : 2
+# Accumulators                                         : 2
+ 14-bit updown accumulator                             : 2
+# Registers                                            : 171
+ Flip-Flops                                            : 171
+# Comparators                                          : 23
+ 14-bit comparator greater                             : 3
+ 16-bit comparator greater                             : 2
+ 16-bit comparator lessequal                           : 15
+ 17-bit comparator lessequal                           : 1
+ 18-bit comparator lessequal                           : 1
+ 4-bit comparator greater                              : 1
+# Multiplexers                                         : 292
+ 1-bit 2-to-1 multiplexer                              : 263
+ 11-bit 2-to-1 multiplexer                             : 1
+ 14-bit 2-to-1 multiplexer                             : 17
+ 2-bit 2-to-1 multiplexer                              : 1
+ 4-bit 2-to-1 multiplexer                              : 9
+ 8-bit 2-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <w1> (without init value) has a constant value of 1 in block <systol_new1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <w2_0> (without init value) has a constant value of 0 in block <systol_new1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <w2_1> (without init value) has a constant value of 1 in block <systol_new1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <w3> (without init value) has a constant value of 1 in block <systol_new1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <w4_0> (without init value) has a constant value of 0 in block <systol_new1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <w4_1> (without init value) has a constant value of 1 in block <systol_new1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <w5_0> (without init value) has a constant value of 0 in block <systol_new1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <w5_1> (without init value) has a constant value of 0 in block <systol_new1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <w5_2> (without init value) has a constant value of 1 in block <systol_new1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <w7> (without init value) has a constant value of 1 in block <systol_new1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <w6_0> (without init value) has a constant value of 0 in block <systol_new1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <w6_1> (without init value) has a constant value of 1 in block <systol_new1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <w8_0> (without init value) has a constant value of 0 in block <systol_new1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <w8_1> (without init value) has a constant value of 1 in block <systol_new1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <w9> (without init value) has a constant value of 1 in block <systol_new1>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:1901 - Instance PLL/pll_base_inst in unit PLL/pll_base_inst of type PLL_BASE has been replaced by PLL_ADV
+
+Optimizing unit <MEM_1> ...
+
+Optimizing unit <top> ...
+
+Optimizing unit <Data_collect> ...
+
+Optimizing unit <Data_send> ...
+
+Optimizing unit <receiver> ...
+
+Optimizing unit <transmitter> ...
+
+Optimizing unit <clk_divide> ...
+
+Optimizing unit <systol_new1> ...
+
+Optimizing unit <mod_16u_2u> ...
+WARNING:Xst:2677 - Node <a1/l_13> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <a1/l_12> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <a1/l_11> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <a1/l_10> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <a1/l_9> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <a1/l_8> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <a1/l_7> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <a1/l_6> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <a1/l_5> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <a1/l_4> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <a1/l_3> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <a1/l_2> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <a1/l_1> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <a1/j_12> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <a1/j_11> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <a1/j_13> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <a1/j_9> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <a1/j_8> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <a1/j_10> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <a1/j_6> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <a1/j_5> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <a1/j_7> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <a1/j_4> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <a1/j_3> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <a1/j_2> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <a1/j_1> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <a1/ws2_13> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <a1/ws2_12> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <a1/read_select_13> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <a1/read_select_12> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <a1/read_select_11> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <a1/read_select_10> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <a1/read_select_9> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <a1/read_select_8> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <a1/read_select_7> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <a1/read_select_6> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <a1/read_select_5> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <a1/read_select_4> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <a1/read_select_3> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <a1/read_select_2> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <a1/read_select_1> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <a1/ws1_13> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <a1/ws1_12> of sequential type is unconnected in block <top>.
+WARNING:Xst:1710 - FF/Latch <clk_div/counter_sampling_9> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <clk_div/counter_sampling_11> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <clk_div/counter_sampling_12> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <clk_div/counter_sampling_13> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <clk_div/counter_sampling_14> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <clk_div/counter_sampling_15> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <clk_div/counter_sampling_16> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <clk_div/counter_uart_10> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <clk_div/counter_uart_9> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <clk_div/counter_uart_11> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <clk_div/counter_uart_12> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <clk_div/counter_uart_13> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <clk_div/counter_uart_14> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <clk_div/counter_uart_15> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <clk_div/counter_uart_16> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Data_send/MEM_read_sel_1> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Data_send/MEM_read_sel_2> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Data_send/MEM_read_sel_3> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <a1/sr_9> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <a1/sr_12> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <a1/sr_10> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <a1/sr_13> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <a1/cnt_4> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <a1/cnt_5> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <a1/cnt_6> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <a1/cnt_7> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <a1/cnt_10> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <a1/cnt_8> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <a1/cnt_9> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <a1/cnt_11> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <a1/cnt_12> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <a1/cnt_13> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <clk_div/counter_sampling_6> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <clk_div/counter_sampling_7> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <clk_div/counter_sampling_10> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <clk_div/counter_sampling_8> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Data_collect/delayed_write_addr_13> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Data_collect/delayed_write_addr_12> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Data_collect/delayed_write_addr_11> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Data_collect/delayed_write_addr_10> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Data_collect/delayed_write_addr_9> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Data_collect/delayed_write_addr_8> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Data_collect/delayed_write_addr_7> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Data_collect/delayed_write_addr_6> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Data_collect/delayed_write_addr_5> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Data_collect/delayed_write_addr_4> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Data_collect/delayed_write_addr_3> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Data_collect/delayed_write_addr_2> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Data_collect/delayed_write_addr_1> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Data_send/MEM_read_sel_6> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Data_send/MEM_read_sel_4> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Data_send/MEM_read_sel_5> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Data_send/MEM_read_sel_7> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Data_send/MEM_read_sel_8> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Data_send/MEM_read_sel_9> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Data_send/MEM_read_sel_10> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Data_send/MEM_read_sel_13> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Data_send/MEM_read_sel_11> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Data_send/MEM_read_sel_12> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Data_collect/MEM_write_addr_1> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Data_collect/MEM_write_addr_2> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Data_collect/MEM_write_addr_3> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Data_collect/MEM_write_addr_13> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Data_collect/MEM_write_addr_12> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Data_collect/MEM_write_addr_11> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Data_collect/MEM_write_addr_10> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Data_collect/MEM_write_addr_9> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Data_collect/MEM_write_addr_8> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Data_collect/MEM_write_addr_7> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Data_collect/MEM_write_addr_6> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Data_collect/MEM_write_addr_5> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Data_collect/MEM_write_addr_4> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <a1/sr_11> in Unit <top> is equivalent to the following 2 FFs/Latches, which will be removed : <a1/sr_8> <a1/sr_7> 
+INFO:Xst:2261 - The FF/Latch <a1/k_13> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <a1/k_12> 
+INFO:Xst:2261 - The FF/Latch <clk_div/counter_uart_0> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <clk_div/counter_sampling_0> 
+INFO:Xst:2261 - The FF/Latch <a1/ws1_10> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <a1/ws1_9> 
+INFO:Xst:2261 - The FF/Latch <a1/ws1_11> in Unit <top> is equivalent to the following 2 FFs/Latches, which will be removed : <a1/ws1_8> <a1/ws1_7> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block top, actual ratio is 7.
+FlipFlop a1/i_12 has been replicated 1 time(s)
+FlipFlop a1/i_15 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 206
+ Flip-Flops                                            : 206
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 1256
+#      GND                         : 1
+#      INV                         : 29
+#      LUT1                        : 68
+#      LUT2                        : 53
+#      LUT3                        : 96
+#      LUT4                        : 91
+#      LUT5                        : 100
+#      LUT6                        : 439
+#      MUXCY                       : 172
+#      MUXF7                       : 18
+#      VCC                         : 1
+#      XORCY                       : 188
+# FlipFlops/Latches                : 206
+#      FD                          : 13
+#      FDC                         : 8
+#      FDCE                        : 18
+#      FDE                         : 9
+#      FDP                         : 1
+#      FDPE                        : 10
+#      FDR                         : 32
+#      FDR_1                       : 1
+#      FDRE                        : 93
+#      FDRE_1                      : 14
+#      FDS                         : 1
+#      FDSE                        : 6
+# RAMS                             : 5
+#      RAM16X1D                    : 2
+#      RAM32M                      : 1
+#      RAMB16BWER                  : 2
+# Clock Buffers                    : 3
+#      BUFG                        : 3
+# IO Buffers                       : 13
+#      IBUF                        : 2
+#      IBUFG                       : 1
+#      OBUF                        : 10
+# Others                           : 1
+#      PLL_ADV                     : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             206  out of  18224     1%  
+ Number of Slice LUTs:                  884  out of   9112     9%  
+    Number used as Logic:               876  out of   9112     9%  
+    Number used as Memory:                8  out of   2176     0%  
+       Number used as RAM:                8
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    922
+   Number with an unused Flip Flop:     716  out of    922    77%  
+   Number with an unused LUT:            38  out of    922     4%  
+   Number of fully used LUT-FF pairs:   168  out of    922    18%  
+   Number of unique control sets:        32
+
+IO Utilization: 
+ Number of IOs:                          13
+ Number of bonded IOBs:                  13  out of    232     5%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                2  out of     32     6%  
+    Number using Block RAM only:          2
+ Number of BUFG/BUFGCTRLs:                3  out of     16    18%  
+ Number of PLL_ADVs:                      1  out of      2    50%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                    | Load  |
+-----------------------------------+------------------------------------------+-------+
+clk_div/clk_uart_internal          | BUFG                                     | 38    |
+clk_div/clk_sampling_internal      | NONE(sampler/prev_rx_clk)                | 9     |
+PLL/pll_base_inst/CLKOUT0          | BUFG                                     | 163   |
+Data_collect/MEM_write_addr_0      | NONE(Data_collect/collect_finish_display)| 1     |
+-----------------------------------+------------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 21.156ns (Maximum Frequency: 47.267MHz)
+   Minimum input arrival time before clock: 6.763ns
+   Maximum output required time after clock: 5.929ns
+   Maximum combinational path delay: 6.636ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_div/clk_sampling_internal'
+  Clock period: 2.691ns (frequency: 371.554MHz)
+  Total number of paths / destination ports: 28 / 16
+-------------------------------------------------------------------------
+Delay:               2.691ns (Levels of Logic = 1)
+  Source:            sampler/prev_rx_clk (FF)
+  Destination:       sampler/one_counter_0 (FF)
+  Source Clock:      clk_div/clk_sampling_internal rising
+  Destination Clock: clk_div/clk_sampling_internal rising
+
+  Data Path: sampler/prev_rx_clk to sampler/one_counter_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.447   0.808  sampler/prev_rx_clk (sampler/prev_rx_clk)
+     LUT3:I0->O            8   0.205   0.802  sampler/rst_rx_clk_rising_OR_34_o1 (sampler/rst_rx_clk_rising_OR_34_o)
+     FDRE:R                    0.430          sampler/one_counter_0
+    ----------------------------------------
+    Total                      2.691ns (1.082ns logic, 1.609ns route)
+                                       (40.2% logic, 59.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'PLL/pll_base_inst/CLKOUT0'
+  Clock period: 21.156ns (frequency: 47.267MHz)
+  Total number of paths / destination ports: 1311938396267 / 354
+-------------------------------------------------------------------------
+Delay:               21.156ns (Levels of Logic = 18)
+  Source:            a1/i_14 (FF)
+  Destination:       a1/j_0 (FF)
+  Source Clock:      PLL/pll_base_inst/CLKOUT0 rising
+  Destination Clock: PLL/pll_base_inst/CLKOUT0 rising
+
+  Data Path: a1/i_14 to a1/j_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            19   0.447   1.416  a1/i_14 (a1/i_14)
+     LUT6:I1->O            2   0.203   0.721  a1/i[15]_PWR_15_o_mod_14/BUS_0008_INV_133_o_SW3_SW0 (N532)
+     LUT4:I2->O            7   0.203   0.878  a1/i[15]_PWR_15_o_mod_14/BUS_0008_INV_133_o_SW3 (N75)
+     LUT5:I3->O            7   0.203   0.774  a1/i[15]_PWR_15_o_mod_14/BUS_0009_INV_150_o12_1 (a1/i[15]_PWR_15_o_mod_14/BUS_0009_INV_150_o12)
+     LUT6:I5->O           14   0.205   1.186  a1/i[15]_PWR_15_o_mod_14/Mmux_a[11]_a[15]_MUX_282_o12 (a1/i[15]_PWR_15_o_mod_14/a[11]_a[15]_MUX_282_o)
+     LUT6:I3->O            3   0.205   0.651  a1/i[15]_PWR_15_o_mod_14/Mmux_a[11]_a[15]_MUX_298_o11_SW3 (N530)
+     LUT6:I5->O            8   0.205   1.031  a1/i[15]_PWR_15_o_mod_14/Mmux_a[11]_a[15]_MUX_298_o11_1 (a1/i[15]_PWR_15_o_mod_14/Mmux_a[11]_a[15]_MUX_298_o11)
+     LUT6:I3->O            7   0.205   1.002  a1/i[15]_PWR_15_o_mod_14/Mmux_a[10]_a[15]_MUX_315_o1_1 (a1/i[15]_PWR_15_o_mod_14/Mmux_a[10]_a[15]_MUX_315_o1)
+     LUT5:I2->O            2   0.205   0.617  a1/i[15]_PWR_15_o_mod_14/Mmux_a[6]_a[15]_MUX_335_o11_SW0_SW0 (N569)
+     LUT6:I5->O           14   0.205   1.205  a1/i[15]_PWR_15_o_mod_14/Mmux_a[6]_a[15]_MUX_335_o11 (a1/i[15]_PWR_15_o_mod_14/a[6]_a[15]_MUX_335_o)
+     LUT5:I1->O           13   0.203   0.933  a1/i[15]_PWR_15_o_mod_14/BUS_0013_INV_218_o11_SW7_SW0 (N679)
+     LUT6:I5->O           19   0.205   1.072  a1/i[15]_PWR_15_o_mod_14/Mmux_a[14]_a[15]_MUX_343_o11 (a1/i[15]_PWR_15_o_mod_14/a[14]_a[15]_MUX_343_o)
+     LUT6:I5->O           12   0.205   0.909  a1/i[15]_PWR_15_o_mod_14/BUS_0014_INV_235_o23 (a1/i[15]_PWR_15_o_mod_14/BUS_0014_INV_235_o)
+     LUT6:I5->O           10   0.205   0.857  a1/i[15]_PWR_15_o_mod_14/BUS_0015_INV_252_o22_1 (a1/i[15]_PWR_15_o_mod_14/BUS_0015_INV_252_o22)
+     LUT5:I4->O            1   0.205   0.684  a1/i[15]_PWR_15_o_mod_14/BUS_0016_INV_269_o21_SW3 (N372)
+     LUT6:I4->O           10   0.203   0.857  a1/i[15]_PWR_15_o_mod_14/BUS_0016_INV_269_o21 (a1/i[15]_PWR_15_o_mod_14/BUS_0016_INV_269_o2)
+     LUT6:I5->O           10   0.205   1.085  a1/i[15]_PWR_15_o_mod_14/BUS_0016_INV_269_o23 (a1/i[15]_PWR_15_o_mod_14/BUS_0016_INV_269_o)
+     LUT6:I3->O           18   0.205   1.050  a1/i[15]_PWR_15_o_mod_14/BUS_0017_INV_286_o27 (a1/i[15]_PWR_15_o_mod_14/BUS_0017_INV_286_o)
+     LUT6:I5->O            1   0.205   0.000  a1/i_0_dpot (a1/i_0_dpot)
+     FDRE:D                    0.102          a1/i_0
+    ----------------------------------------
+    Total                     21.156ns (4.229ns logic, 16.927ns route)
+                                       (20.0% logic, 80.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Data_collect/MEM_write_addr_0'
+  Clock period: 2.405ns (frequency: 415.826MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               2.405ns (Levels of Logic = 1)
+  Source:            Data_collect/collect_finish_display (FF)
+  Destination:       Data_collect/collect_finish_display (FF)
+  Source Clock:      Data_collect/MEM_write_addr_0 falling
+  Destination Clock: Data_collect/MEM_write_addr_0 falling
+
+  Data Path: Data_collect/collect_finish_display to Data_collect/collect_finish_display
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             19   0.447   1.071  Data_collect/collect_finish_display (Data_collect/collect_finish_display)
+     INV:I->O              1   0.206   0.579  Data_collect/collect_finish_display_INV_2_o1_INV_0 (Data_collect/collect_finish_display_INV_2_o)
+     FDR:D                     0.102          Data_collect/collect_finish_display
+    ----------------------------------------
+    Total                      2.405ns (0.755ns logic, 1.650ns route)
+                                       (31.4% logic, 68.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_div/clk_uart_internal'
+  Clock period: 3.047ns (frequency: 328.159MHz)
+  Total number of paths / destination ports: 215 / 64
+-------------------------------------------------------------------------
+Delay:               3.047ns (Levels of Logic = 2)
+  Source:            transmitter/state_0 (FF)
+  Destination:       transmitter/shift_9 (FF)
+  Source Clock:      clk_div/clk_uart_internal rising
+  Destination Clock: clk_div/clk_uart_internal rising
+
+  Data Path: transmitter/state_0 to transmitter/shift_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              9   0.447   1.058  transmitter/state_0 (transmitter/state_0)
+     LUT5:I2->O            8   0.205   1.031  transmitter/GND_7_o_GND_7_o_AND_8_o1 (transmitter/GND_7_o_GND_7_o_AND_8_o)
+     LUT3:I0->O            1   0.205   0.000  transmitter/Mmux_PWR_7_o_PWR_7_o_mux_13_OUT31 (transmitter/PWR_7_o_PWR_7_o_mux_13_OUT<2>)
+     FDPE:D                    0.102          transmitter/shift_2
+    ----------------------------------------
+    Total                      3.047ns (0.959ns logic, 2.088ns route)
+                                       (31.5% logic, 68.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_div/clk_uart_internal'
+  Total number of paths / destination ports: 38 / 38
+-------------------------------------------------------------------------
+Offset:              3.711ns (Levels of Logic = 1)
+  Source:            rst (PAD)
+  Destination:       sampler/data_bit (FF)
+  Destination Clock: clk_div/clk_uart_internal rising
+
+  Data Path: rst to sampler/data_bit
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           223   1.222   2.059  rst_IBUF (rst_IBUF)
+     FDS:S                     0.430          sampler/data_bit
+    ----------------------------------------
+    Total                      3.711ns (1.652ns logic, 2.059ns route)
+                                       (44.5% logic, 55.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_div/clk_sampling_internal'
+  Total number of paths / destination ports: 16 / 16
+-------------------------------------------------------------------------
+Offset:              4.718ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       sampler/one_counter_0 (FF)
+  Destination Clock: clk_div/clk_sampling_internal rising
+
+  Data Path: rst to sampler/one_counter_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           223   1.222   2.060  rst_IBUF (rst_IBUF)
+     LUT3:I2->O            8   0.205   0.802  sampler/rst_rx_clk_rising_OR_34_o1 (sampler/rst_rx_clk_rising_OR_34_o)
+     FDRE:R                    0.430          sampler/one_counter_0
+    ----------------------------------------
+    Total                      4.718ns (1.857ns logic, 2.861ns route)
+                                       (39.4% logic, 60.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'PLL/pll_base_inst/CLKOUT0'
+  Total number of paths / destination ports: 245 / 228
+-------------------------------------------------------------------------
+Offset:              6.763ns (Levels of Logic = 4)
+  Source:            rst (PAD)
+  Destination:       a1/read_select_0 (FF)
+  Destination Clock: PLL/pll_base_inst/CLKOUT0 rising
+
+  Data Path: rst to a1/read_select_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           223   1.222   2.424  rst_IBUF (rst_IBUF)
+     LUT6:I0->O            1   0.203   0.684  a1/i[15]_PWR_15_o_mod_14/Mmux_a[0]_a[15]_MUX_405_o111_SW0 (N427)
+     LUT6:I4->O            1   0.203   0.924  a1/i[15]_PWR_15_o_mod_14/BUS_0017_INV_286_o27_SW1 (N345)
+     LUT6:I1->O            1   0.203   0.579  a1/_n0509_inv (a1/_n0509_inv)
+     FDE:CE                    0.322          a1/read_select_0
+    ----------------------------------------
+    Total                      6.763ns (2.153ns logic, 4.610ns route)
+                                       (31.8% logic, 68.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Data_collect/MEM_write_addr_0'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.711ns (Levels of Logic = 1)
+  Source:            rst (PAD)
+  Destination:       Data_collect/collect_finish_display (FF)
+  Destination Clock: Data_collect/MEM_write_addr_0 falling
+
+  Data Path: rst to Data_collect/collect_finish_display
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           223   1.222   2.059  rst_IBUF (rst_IBUF)
+     FDR:R                     0.430          Data_collect/collect_finish_display
+    ----------------------------------------
+    Total                      3.711ns (1.652ns logic, 2.059ns route)
+                                       (44.5% logic, 55.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_div/clk_uart_internal'
+  Total number of paths / destination ports: 9 / 9
+-------------------------------------------------------------------------
+Offset:              3.634ns (Levels of Logic = 1)
+  Source:            receiver/data_7 (FF)
+  Destination:       Rx_data<7> (PAD)
+  Source Clock:      clk_div/clk_uart_internal rising
+
+  Data Path: receiver/data_7 to Rx_data<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             2   0.447   0.616  receiver/data_7 (receiver/data_7)
+     OBUF:I->O                 2.571          Rx_data_7_OBUF (Rx_data<7>)
+    ----------------------------------------
+    Total                      3.634ns (3.018ns logic, 0.616ns route)
+                                       (83.0% logic, 17.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'PLL/pll_base_inst/CLKOUT0'
+  Total number of paths / destination ports: 13 / 1
+-------------------------------------------------------------------------
+Offset:              5.929ns (Levels of Logic = 3)
+  Source:            a1/k_7 (FF)
+  Destination:       sys_finish (PAD)
+  Source Clock:      PLL/pll_base_inst/CLKOUT0 rising
+
+  Data Path: a1/k_7 to sys_finish
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             5   0.447   1.079  a1/k_7 (a1/k_7)
+     LUT6:I0->O            2   0.203   0.845  a1/GND_16_o_GND_16_o_equal_134_o<13>1 (a1/GND_16_o_GND_16_o_equal_134_o<13>)
+     LUT5:I2->O            1   0.205   0.579  a1/Mmux_finish11 (sys_finish_OBUF)
+     OBUF:I->O                 2.571          sys_finish_OBUF (sys_finish)
+    ----------------------------------------
+    Total                      5.929ns (3.426ns logic, 2.503ns route)
+                                       (57.8% logic, 42.2% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               6.636ns (Levels of Logic = 3)
+  Source:            rst (PAD)
+  Destination:       sys_finish (PAD)
+
+  Data Path: rst to sys_finish
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           223   1.222   2.060  rst_IBUF (rst_IBUF)
+     LUT5:I4->O            1   0.205   0.579  a1/Mmux_finish11 (sys_finish_OBUF)
+     OBUF:I->O                 2.571          sys_finish_OBUF (sys_finish)
+    ----------------------------------------
+    Total                      6.636ns (3.998ns logic, 2.638ns route)
+                                       (60.2% logic, 39.8% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock Data_collect/MEM_write_addr_0
+-----------------------------+---------+---------+---------+---------+
+                             | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                 |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------+---------+---------+---------+---------+
+Data_collect/MEM_write_addr_0|         |         |    2.405|         |
+-----------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock PLL/pll_base_inst/CLKOUT0
+-----------------------------+---------+---------+---------+---------+
+                             | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                 |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------+---------+---------+---------+---------+
+Data_collect/MEM_write_addr_0|         |    8.144|    4.366|         |
+PLL/pll_base_inst/CLKOUT0    |   21.156|    2.371|    8.343|         |
+clk_div/clk_uart_internal    |    2.446|         |         |         |
+-----------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk_div/clk_sampling_internal
+-----------------------------+---------+---------+---------+---------+
+                             | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                 |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------+---------+---------+---------+---------+
+PLL/pll_base_inst/CLKOUT0    |    2.637|         |         |         |
+clk_div/clk_sampling_internal|    2.691|         |         |         |
+-----------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk_div/clk_uart_internal
+-----------------------------+---------+---------+---------+---------+
+                             | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                 |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------+---------+---------+---------+---------+
+PLL/pll_base_inst/CLKOUT0    |    3.161|         |         |         |
+clk_div/clk_sampling_internal|    2.601|         |         |         |
+clk_div/clk_uart_internal    |    3.047|         |         |         |
+-----------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 21.00 secs
+Total CPU time to Xst completion: 20.92 secs
+ 
+--> 
+
+Total memory usage is 297748 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  180 (   0 filtered)
+Number of infos    :   13 (   0 filtered)
+
