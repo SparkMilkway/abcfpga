@@ -40,6 +40,7 @@
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
     <transform xil_pn:end_ts="1480375156" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1480375156">
       <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
     </transform>
     <transform xil_pn:end_ts="1480378786" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-4764573739467360760" xil_pn:start_ts="1480378786">
       <status xil_pn:value="SuccessfullyRun"/>
